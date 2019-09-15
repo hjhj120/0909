@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>평수계산기</h1>
+	<br>
+	가로  <input type="number" id="myahigh">M
+	<div id="amonitor"></div>
+	<br>
+	세로  <input type="number" id="mybhigh">M
+	<div id="bmonitor"></div>
+	<br><br>
+
+	<div id="monitor">평 수</div>
+	<script type="text/javascript">
+
+		myahigh.oninput = function(){
+			amonitor.innerHTML = myahigh.value;
+
+			var mya = myahigh.value;
+			var myb = mybhigh.value;
+			var allhigh = mya*myb/3.3
+
+			monitor.innerHTML = "평수는 " + allhigh + "평입니다.";
+		}
+		mybhigh.oninput = function(){
+			bmonitor.innerHTML = mybhigh.value;
+
+			var mya = myahigh.value;
+			var myb = mybhigh.value;
+			var allhigh = mya*myb/3.3
+
+			monitor.innerHTML = "평수는 " + allhigh + " 평입니다.";
+		}
+
+
+	</script>
+
+</body>
+</html>
